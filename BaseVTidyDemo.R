@@ -1,5 +1,6 @@
 library(tidyverse)
 
+#Never Show This Again
 
 CourseGrades <- read.csv("~/Documents/CourseGrades.csv", 
                          stringsAsFactors=FALSE)
@@ -23,7 +24,7 @@ CourseGrades_BASE <- merge(x = CourseGrades_BASE, y = StudentData, by = c("STU_N
 
 #TIDY
 CourseGrades <- CourseGrades %>%
-                inner_join(.,SemesterData, by = c("STU_NUM", "SEMESTER")) %>%
+                inner_join(. ,SemesterData, by = c("STU_NUM", "SEMESTER")) %>%
                 inner_join(.,StudentData, by = "STU_NUM")
 
 
